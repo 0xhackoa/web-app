@@ -1,4 +1,3 @@
 ## QuestChain
 
-#### Bitcoin based cross-chain quest platform
-
+#### Bitcoin based cross-chain quests
