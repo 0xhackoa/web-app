@@ -6,7 +6,6 @@ const config: Config = {
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
 	],
   prefix: "",
   theme: {
@@ -51,8 +50,8 @@ const config: Config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
-        },
       },
+    },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -74,6 +73,7 @@ const config: Config = {
       },
     },
   },
+  
   plugins: [require("tailwindcss-animate")],
 };
 

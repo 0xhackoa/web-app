@@ -4,8 +4,12 @@
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%; */
+
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -36,8 +40,12 @@
   }
  
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%; */
+
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
  
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -65,6 +73,20 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
  
 @layer base {
   * {
@@ -72,5 +94,7 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
   }
 }
