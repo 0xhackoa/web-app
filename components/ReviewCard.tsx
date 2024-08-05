@@ -14,21 +14,21 @@ export const ReviewCard = ({
     return (
       <figure
         className={cn(
-          "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-          // light styles
-          "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-          // dark styles
-          "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
+            "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+            // default styles (dark mode)
+            "border-white/10 bg-white/10 hover:bg-white/20",
+            // light mode styles
+            "light:border-black/10 light:bg-black/5 light:hover:bg-black/10"
         )}
       >
         <div className="flex flex-row items-center gap-2">
           <img className="rounded-full" width="32" height="32" alt="" src={img} />
           <div className="flex flex-col">
-            <figcaption className="text-sm font-medium dark:text-white">
+          <figcaption className="text-sm font-medium text-white light:text-black">
               {name}
             </figcaption>
-            <p className="text-xs font-medium dark:text-white/40">{username}</p>
-          </div>
+            <p className="text-xs font-medium text-white/40 light:text-black/40">{username}</p>
+            </div>
         </div>
         <blockquote className="mt-2 text-sm">{body}</blockquote>
       </figure>

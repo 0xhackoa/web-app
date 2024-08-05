@@ -1,6 +1,8 @@
 import Marquee from "@/components/magicui/marquee";
 import {QuestProtocols} from "../constants/questProtocols"
+// import { MarqueeProtocols } from "@/components/Marquee";
 import { ReviewCard } from "@/components/ReviewCard";
+
 
 
 export default function Home() {
@@ -27,9 +29,11 @@ const secondRow = QuestProtocols.slice(QuestProtocols.length / 2);
           <ReviewCard key={QuestProtocols.username} {...QuestProtocols} />
         ))}
       </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background light:from-white"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background light:from-white"></div>
       </div>
+
+      {/* <MarqueeProtocols/> */}
 
      <w3m-connect-button />
       <div>
