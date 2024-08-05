@@ -1,11 +1,12 @@
 import type { Config } from "tailwindcss"
 
-const config: Config = {
+const config = {
   darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
 	],
   prefix: "",
   theme: {
@@ -17,6 +18,9 @@ const config: Config = {
       },
     },
     extend: {
+      marqueeDuration: {
+        '20s': '20s',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -50,31 +54,40 @@ const config: Config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
       },
-    },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
+      // keyframes: {
+      //   "accordion-down": {
+      //     from: { height: "0" },
+      //     to: { height: "var(--radix-accordion-content-height)" },
+      //   },
+      //   "accordion-up": {
+      //     from: { height: "var(--radix-accordion-content-height)" },
+      //     to: { height: "0" },
+      //   },
+      // },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
       },
     },
   },
-  
   plugins: [require("tailwindcss-animate")],
-};
+} satisfies Config
 
 export default config
