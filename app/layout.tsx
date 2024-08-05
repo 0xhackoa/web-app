@@ -6,9 +6,15 @@ import { cookieToInitialState } from 'wagmi'
 
 import { config } from '@/config'
 import Web3ModalProvider from '@/context'
-import { Inter } from "next/font/google";
+import { Palanquin } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+
+// const inter = Inter({ subsets: ["latin"] });
+const palanquin = Palanquin({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'],
+  variable: '--font-palanquin',
+})
 
 
 export const metadata: Metadata = {
@@ -27,7 +33,7 @@ export default function RootLayout({
 }>) {
   const initialState = cookieToInitialState(config, headers().get('cookie'))
   return (
-    <html lang="en">
+    <html lang="en" className={`${palanquin.variable} font-sans`}>
       <body>
         <Web3ModalProvider initialState={initialState}>{children}</Web3ModalProvider>
       </body>

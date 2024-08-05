@@ -18,6 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['var(--font-palanquin)'],
+        palanquin: ['var(--font-palanquin)'],
+      },
       marqueeDuration: {
         '20s': '20s',
       },

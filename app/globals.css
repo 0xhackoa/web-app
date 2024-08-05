@@ -66,4 +66,7 @@
   body {
     @apply bg-background text-foreground;
   }
+  html {
+    font-family: var(--font-palanquin), system-ui, sans-serif;
+  }
 }
