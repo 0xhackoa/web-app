@@ -5,8 +5,11 @@ import './globals.css'
 import { cookieToInitialState } from 'wagmi'
 
 import { config } from '@/config'
-import Web3ModalProvider from '@/context'
+// import Web3ModalProvider from '@/context'
 import { Palanquin } from "next/font/google";
+import Navbar from '@/components/NavBar'
+import Web3ModalWrapper from '@/components/Web3ModalWrapper'
+
 
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -35,7 +38,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${palanquin.variable} font-sans`}>
       <body>
-        <Web3ModalProvider initialState={initialState}>{children}</Web3ModalProvider>
+        <Web3ModalWrapper initialState={initialState}>
+        <Navbar />
+          <main className="pt-16">
+            {children}
+          </main>
+          </Web3ModalWrapper>
       </body>
     </html>
   )

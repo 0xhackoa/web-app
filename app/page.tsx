@@ -18,7 +18,7 @@ const secondRow = QuestProtocols.slice(QuestProtocols.length / 2);
 
       <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
 
-        <div className="absolute top-0 left-0 right-0 p-4 text-center bg-background/80 backdrop-blur-sm z-10">
+        <div className="absolute top-0 left-0 right-0 p-4 text-center bg-background/80 backdrop-blur-sm z-9">
           <h2 className="text-lg font-palanquin">Bitcoin based cross-chain quests</h2>
         </div>
 
