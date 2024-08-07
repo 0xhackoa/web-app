@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@anon-aadhaar/core": "^2.4.0",
     "@anon-aadhaar/react": "^2.4.0",
     "@catalogfi/wallets": "^0.2.47",
     "@gardenfi/core": "^0.1.15",
