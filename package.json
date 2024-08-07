@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@anon-aadhaar/react": "^2.4.0",
+    "@catalogfi/wallets": "^0.2.47",
+    "@gardenfi/core": "^0.1.15",
+    "@gardenfi/orderbook": "^0.1.10",
+    "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-query": "^5.51.21",
     "@web3modal/wagmi": "^5.0.11",
     "class-variance-authority": "^0.7.0",

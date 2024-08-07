@@ -5,14 +5,12 @@ import './globals.css'
 import { cookieToInitialState } from 'wagmi'
 
 import { config } from '@/config'
-// import Web3ModalProvider from '@/context'
 import { Palanquin } from "next/font/google";
 import Navbar from '@/components/NavBar'
 import Web3ModalWrapper from '@/components/Web3ModalWrapper'
 
 
 
-// const inter = Inter({ subsets: ["latin"] });
 const palanquin = Palanquin({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700'],
@@ -21,10 +19,9 @@ const palanquin = Palanquin({
 
 
 export const metadata: Metadata = {
-  title: "QuestChain",
-  description: "Bitcoin based cross-chain quest platform",
+  title: "Play a Bit",
+  description: "Bitcoin based cross-chain betting platform",
 };
-
 
 // wallet connect Project ID: d25d30fb15568c9a05abe406f8883973
 
