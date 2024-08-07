@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import { useAnonAadhaar } from '@anon-aadhaar/react';
 import { useAccount } from "wagmi";
 
-
 export default function Play() {
   const [anonAadhaar] = useAnonAadhaar();
   const { isConnected } = useAccount();
