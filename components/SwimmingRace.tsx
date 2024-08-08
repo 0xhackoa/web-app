@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import InvestmentForm from "@/app/play/Investment";
 
 const POOL_WIDTH = 800;
 const POOL_HEIGHT = 400;
@@ -106,6 +107,11 @@ const SwimmingRace = () => {
     // Here you would call your backend API
   };
 
+  const handleInvestmentSubmit = (investments: any) => {
+    console.log("Investments submitted:", investments);
+    // Here you would typically send these investments to your backend
+  };
+
   const startRace = () => {
     setRaceStarted(true);
     setWinner(null);
@@ -114,6 +120,9 @@ const SwimmingRace = () => {
 
   return (
     <div className="p-4">
+      <div className="mt-8">
+        <InvestmentForm swimmers={swimmers} onInvestmentSubmit={handleInvestmentSubmit} />
+      </div>
       <div className="relative mb-4">
         {/* <SwimmingPool> */}
         <div className={`w-[800px]  h-[300px] bg-[url('/pool.png')] bg-cover broder-2 border-black  bg-center`}>
@@ -132,12 +141,13 @@ const SwimmingRace = () => {
                 className="w-full h-full"
                 src="https://lottie.host/embed/e6b76612-ceb0-4880-a240-f6340d84dab5/GcHX1Kjio3.json"
               ></iframe>
-              <span className=" w-full h-full pl-2 absolute">{swimmer.name}</span>
+              <span className=" w-full h-full text-black pl-2 absolute">{swimmer.name}</span>
             </div>
           ))}
         </div>
         {/* </SwimmingPool> */}
       </div>
+
       <button
         onClick={startRace}
         className="bg-green-500 text-white px-4 py-2 rounded"

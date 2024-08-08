@@ -4,6 +4,7 @@ import ProveAge from "@/components/ProveAge";
 import Marquee from "@/components/magicui/marquee";
 import { QuestProtocols } from "../constants/questProtocols";
 import { ReviewCard } from "@/components/ReviewCard";
+import SwimmingRace from "@/components/SwimmingRace";
 
 export default function Home() {
   const { isConnected } = useAccount();
@@ -36,8 +37,9 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background light:from-white"></div>
         <w3m-button />
       </div>
+      <SwimmingRace />
 
-      <div>{isConnected ? <ProveAge /> : null}</div>
+      {/* <div>{isConnected ? <ProveAge /> : null}</div> */}
     </main>
   );
 }
